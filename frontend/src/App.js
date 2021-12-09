@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Homescreen from './screens/Homescreen';
 import Productscreen from './screens/Productscreen';
 function App() {
@@ -20,10 +20,10 @@ function App() {
         </div>
       </header>
       <main>
-        <Routes>
-        <Route path ="/" component ={Homescreen} exact></Route>
-        <Route path ="/product/:id" component ={Productscreen}></Route>
-        </Routes>
+       <Routes>
+          <Route path ="/" element ={<Homescreen/>} exact></Route>
+          <Route path ="/product/:id" element ={<Productscreen/>}></Route>
+       </Routes>
         
       </main>
       <footer className="row center">All right reserved</footer>
